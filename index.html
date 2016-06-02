@@ -7,3 +7,10 @@ title: Emir Al-Kafagi
 	<h1>I'm Emir Al-Kafagi!</h1>
 	<p class="info">I'm the guy that everyone calls when their PC doesn't work.</p>
     	</div><!-- /.blurb -->
+    		<ul class="posts">
+
+	  {% for post in site.posts %}
+	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
+
