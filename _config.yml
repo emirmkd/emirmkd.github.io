@@ -1,4 +1,3 @@
 name: Emir Al-Kafagi, The Arab Geek
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-future:true
