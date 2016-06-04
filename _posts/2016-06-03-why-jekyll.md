@@ -2,7 +2,7 @@
 layout: post
 title: "Why Jekyll"
 date: 2016-06-03
-thumbnail: img/emir.jpg
+thumbnail: https://jekyllrb.com/img/logo-2x.png
 ---
 <img class="postimg" src="https://jekyllrb.com/img/logo-2x.png">
 Some of you may wonder why I chose to make this blog on GitHub pages with Jekyll. Well, I learned about Jekyll a while ago, together with the information that you can host your website on GitHub for free. I thought it was interesting but never really got around to it. A week or two ago, I found out about GitHub's <a href="https://education.github.com/pack">Student Pack!</a><br>
