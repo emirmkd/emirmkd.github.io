@@ -86,3 +86,9 @@ ul.posts li {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+.highlight {
+    border: solid 1px black;
+    padding-left: 15px;
+    background-color: #FFFFEF;
+    border-radius: 5px;
+}
