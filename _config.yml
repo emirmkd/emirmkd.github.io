@@ -1,5 +1,7 @@
-name: Emir Al-Kafagi, The Arab Geek
+name: 'Emir Al-Kafagi, The Arab Geek'
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+permalink: /blog/:title
 fb_admins: https://www.facebook.com/emir.alkafagi
 avatar: img/emir.jpg
+url: 'http://www.emiralkafagi.me/'
+author: 'Emir Al-Kafagi'
