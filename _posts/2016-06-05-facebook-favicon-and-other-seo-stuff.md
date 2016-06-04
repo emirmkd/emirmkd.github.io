@@ -5,8 +5,8 @@ date: 2016-06-05
 thumbnail: http://cognitiveseo.com/blog/wp-content/uploads/2013/05/facebook-seo.png
 published: false
 ---
+<p class="postdescription">After setting up the basics, I turned to some other basics that some might take for granted: SEO, Favicons, Website Titles and Facebook OpenGraph. </p>
 <img class="postimg" src="http://cognitiveseo.com/blog/wp-content/uploads/2013/05/facebook-seo.png">
-After setting up the basics, I turned to some other basics that some might take for granted: SEO, Favicons, Website Titles and Facebook OpenGraph. <br>
 <h3>Favicon</h3>
 Interestingly, this was a hard nut to crack because I haven't had a need to set a favicon manually... ever? Wordpress can get you spoiled like that! No need to write a single damn line of code! <br>
 <br>
