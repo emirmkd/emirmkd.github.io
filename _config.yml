@@ -3,6 +3,3 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 fb_admins: https://www.facebook.com/emir.alkafagi
 avatar: img/emir.jpg
-{% if page.url %}
-  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-{% endif %}
