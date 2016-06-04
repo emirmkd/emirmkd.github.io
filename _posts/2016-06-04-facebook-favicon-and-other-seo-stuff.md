@@ -14,7 +14,7 @@ On the other hand, I had no idea what kind of favicon I wanted. I made a simple 
 <img class="postimg" src="http://emiralkafagi.me/img/fav.png">
 What you do is create a 32x32px (for Retina and higher resolution) .png favicon and upload it wherever you want (I try to keep all my images in my /img folder).<br>
 Next, you'll need to add this line to the <i>head</i> part:
-```
+``` html The code for adding a favicon
 <link rel="shortcut icon" type="image/png" href="/favicon.png">
 ```
 But, you would change "/favicon.png" to the file path of your favicon (mine is /img/fav.png because my favicon "fav.png" is located in the folder "img")
