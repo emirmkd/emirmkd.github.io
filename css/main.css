@@ -65,6 +65,7 @@ ul.posts li {
     max-width: 441px;
     margin-left: auto;
     margin-right: auto;
+    margin-top:10px;
 }
 .emir {
     width: 460px;
@@ -72,4 +73,6 @@ ul.posts li {
     margin-right: auto;
     display: block;
 }
-
+.myname {
+    margin-bottom:0;
+}
