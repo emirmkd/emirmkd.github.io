@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Facebook, favicon and other SEO stuff"
-date: 2016-06-04
-published: true
+date: 2016-05-04
 thumbnail: http://cognitiveseo.com/blog/wp-content/uploads/2013/05/facebook-seo.png
 ---
 <img class="postimg" src="http://cognitiveseo.com/blog/wp-content/uploads/2013/05/facebook-seo.png">
