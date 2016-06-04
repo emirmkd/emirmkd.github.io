@@ -3,6 +3,7 @@ layout: post
 title: "Facebook, favicon and other SEO stuff"
 date: 2016-06-05
 thumbnail: http://cognitiveseo.com/blog/wp-content/uploads/2013/05/facebook-seo.png
+published: false
 ---
 <img class="postimg" src="http://cognitiveseo.com/blog/wp-content/uploads/2013/05/facebook-seo.png">
 After setting up the basics, I turned to some other basics that some might take for granted: SEO, Favicons, Website Titles and Facebook OpenGraph. <br>
