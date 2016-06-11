@@ -16,7 +16,7 @@ Time to see what I need to set up Jekyll and how to make my blog. I began by vis
 <h3>I followed the tutorial and lo and behold, my new blog was born!</h3>
 So far, it's just a bit of basic code to have some kind of structure, with minimal CSS styling, but I intend to use JavaScript, try new HTML5 and CSS3 things and hopefully, I won't be too lazy to blog about it :)
 Oh, and I added some tags, so I can show off my blog on Facebook properly!
-{% highlight ruby %}
+{% highlight html %}
 def show
   @widget = Widget(params[:id])
   respond_to do |format|
