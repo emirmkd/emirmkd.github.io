@@ -7,7 +7,7 @@ image: img/logo-2x.png
 ---
 <p class="postdescription">Some of you may wonder why I chose to make this blog on GitHub pages with Jekyll. Well, I learned about Jekyll a while ago, together with the information that you can host your website on GitHub for free.</p>
 <!--more-->
-<img class="postimg" src="emiralkafagi.me/img/logo-2x.png">
+<img class="postimg" src="www.emiralkafagi.me/img/logo-2x.png">
 I thought it was interesting but never really got around to it. A week or two ago, I found out about GitHub's <a href="https://education.github.com/pack">Student Pack!</a><br>
 <img class="postimg" src="https://dwa5x7aod66zk.cloudfront.net/assets/sdp-backpack-a64038716bf134f45e809ff86b9611fb97e41bbd2ccfa3181da73cf164d3c200.png">
 Fortunately for me, I am still a student, so I got the offer and it gave me a sh*tton of things <a href="https://media.giphy.com/media/dARUXSVNXc5Da/giphy.gif">FOR FREE!</a> In the meantime, my university exams were coming to an end and I also quit my job. This was the perfect time to learn new things and to expand my knowledge about computers, websites, maybe learn how to code. I decided to make a <a href="https://www.instagram.com/p/BF9CtZXhEYh/?taken-by=g33k.mk">list</a> to keep track. Thinking that the best way to learn is to explain what you're learning to someone, I thought it might be a good idea to blog about this "journey" as I go through it.
