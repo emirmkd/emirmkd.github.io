@@ -11,7 +11,7 @@ description: 'What is this anyways?'
 comments: true
 favicon: img/fav.png
 rss_url: blog/atom.xml
-
+excerpt_separator: <!--more-->
 # Author settings
 author:
   name: Emir Al-Kafagi
