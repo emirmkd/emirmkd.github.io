@@ -4,6 +4,7 @@ title: "Why Jekyll"
 date: 2016-06-03
 thumbnail: https://jekyllrb.com/img/logo-2x.png
 ---
+<meta property="og:url" content="https://jekyllrb.com/img/logo-2x.png">
 <p class="postdescription">Some of you may wonder why I chose to make this blog on GitHub pages with Jekyll. Well, I learned about Jekyll a while ago, together with the information that you can host your website on GitHub for free.</p>
 <!--more-->
 <img class="postimg" src="https://jekyllrb.com/img/logo-2x.png">
