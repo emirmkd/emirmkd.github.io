@@ -13,7 +13,9 @@ description: I'm the guy that everyone calls when their PC doesn't work.
     		<ul class="posts">
 <h4 style="margin-bottom: 5px;">Latest blog post:</h4>
 	  {% for post in site.posts limit:1 %}
-<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+{{ post.excerpt }}
+</li>
 {% endfor %}
     
 	</ul>
