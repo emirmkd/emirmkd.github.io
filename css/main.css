@@ -114,7 +114,7 @@ ul.posts li {
     display:inline;
 }  
 
-.fb-share-button{
+.fb_iframe_widget{
     position:relative;
-    top:-7px;
+    top:-4px;
 }
