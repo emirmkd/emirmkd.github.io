@@ -26,6 +26,7 @@ When I tried sharing my <a href="http://www.emiralkafagi.me/blog/2016/06/03/why-
 First, you should always read the <a href="https://developers.facebook.com/docs/sharing/webmasters">official Facebook docs</a> on <a href="http://ogp.me/">the Open Graph protocol</a>. It really helps! <br>
 But, the main problem is to include the Jekyll/Liquid variables so it works with OG (Open Graph). Basically, you just put a bunch of Meta Tags that tell Facebook what is what. Which part is the name of the author, which part is the description, title, thumbnail image, etc. And you put all those meta tags in your &lt;head&gt;&lt;/head&gt; part. On my blog, I used includes, instead of having one big head.html file, I included an og.html file in it which only has the meta tags for Open Graph. <br>
 This is the code:
+{% raw %}
 <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
  2
  3
@@ -72,7 +73,72 @@ This is the code:
 <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;fb:admins&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ site.fb_admins }}&quot;</span><span style="color: #f92672">&gt;</span>
 <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;fb:app_id&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ site.fb_appid }}&quot;</span><span style="color: #f92672">&gt;</span>
 </pre></td></tr></table></div>
+{% endraw %}
 To be honest, I can't remember where I found this code, but I think it was a mix from a few places and then a bit of my own addition. <br>
 <h4>What it does?</h4>
 As you can see, there are a lot of {} brackets. These are the liquid tags which "dynamically" pull tag information from the page you are in. This means that instead of having to write tags manually for each page and for every new page, you tell Jekyll to write those automatically, for each page and give it to Facebook. <br>
 I will be VERY honest with you: I am not sure what all the parts of this code do EXACTLY. I'll try to explain some of them, so you can at least get how this works. <br>
+Let's take the first line as an example.
+{% raw %}
+<div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;og:title&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&quot;</span><span style="color: #f92672">&gt;</span>
+</pre></td></tr></table></div>
+{% endraw %}
+This meta tag is for the title. This is what the code is in layman's terms:<br>
+If there is a page title (which is defined as page.title) then use that, otherwise use the site's title (which is site.title). The site title is defined in your _config.yml, but I generally try to have "title" in the front matter of every page (you just write title: *insert your title here* between the ---'s of every page).
+<h3>Twitter</h3>
+I did the same with <a href="https://dev.twitter.com/cards/overview">Twitter cards</a>, but Twitter has a bit of a different meta tag structure. I made my website use the "Summary Card with Large Image" to make my website look pretty when I share something from my website (even though I know no one actually reads my blog posts, I try).<br>
+I also used an Include to include this code in my head.html file. This is the code:
+{% raw %}
+<div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="color:#FFF ; margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;twitter:card&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;summary_large_image&quot;</span><span style="color: #f92672">&gt;</span>
+<span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;twitter:site&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;@EmirTheG33k&quot;</span><span style="color: #f92672">&gt;</span>
+<span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;twitter:creator&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;@EmirTheG33k&quot;</span><span style="color: #f92672">&gt;</span>
+{% if page.title %}
+  <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;twitter:title&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ page.title }}&quot;</span><span style="color: #f92672">&gt;</span>
+{% else %}
+  <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;twitter:title&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ site.title }}&quot;</span><span style="color: #f92672">&gt;</span>
+{% endif %}
+{% if page.url %}
+  <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;twitter:url&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ site.url }}{{ page.url }}&quot;</span><span style="color: #f92672">&gt;</span>
+{% endif %}
+{% if page.description %}
+  <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;twitter:description&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ page.description }}&quot;</span><span style="color: #f92672">&gt;</span>
+{% else %}
+  <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;twitter:description&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ site.description }}&quot;</span><span style="color: #f92672">&gt;</span>
+{% endif %}
+{% if page.image %}
+  <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;twitter:image:src&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ site.url }}{{ page.image }}&quot;</span><span style="color: #f92672">&gt;</span>
+{% else %}
+  <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">name=</span><span style="color: #e6db74">&quot;twitter:image:src&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ post.thumbnail }}&quot;</span><span style="color: #f92672">&gt;</span>
+{% endif %}
+</pre></td></tr></table></div>
+{% endraw %}
+It works on the same principle as Facebook's tags. If there is a page title, use that, otherwise take the site's title. <br>
+After you include this code in your website, you need to validate the meta tags on Twitter's <a href="https://cards-dev.twitter.com/validator">Validator tool</a>.
+<h3>Images on Facebook and Twitter</h3>
+This part is really important, and it was pretty hard for me to get it right, until I realized how easy it is -.- <br>
+What you do is, you put "image" and "thumbnail" tags in the front matter of your pages and posts. You do this simply by adding: <br>
+image: link/or/path/to/image <br>
+thumbnail: use/the/same/link/as/above <br>
+You can see an example of this on my <a href="https://github.com/emirmkd/emirmkd.github.io/blob/master/_posts/2016-06-03-why-jekyll.md">last blog post's code</a> by clicking "Raw' on GitHub. <br>
+Using both "image" and "thumbnail" makes sure that the image YOU want shows up as the thumbnail image for that page/post :). <br>
+I think that's enough for now. I hope this was useful for some newbs like me and you'll stick around to read my next blog post <3.
