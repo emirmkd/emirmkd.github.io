@@ -13,7 +13,7 @@ favicon: img/fav.png
 rss_url: blog/atom.xml
 excerpt_separator: <!--more-->
 locale: "en_US"
-fb_appid: 
+fb_appid: "1549021652067281"
 # Author settings
 author:
   name: Emir Al-Kafagi
