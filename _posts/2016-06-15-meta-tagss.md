@@ -142,4 +142,4 @@ thumbnail: use/the/same/link/as/above <br>
 You can see an example of this on my <a href="https://github.com/emirmkd/emirmkd.github.io/blob/master/_posts/2016-06-03-why-jekyll.md">last blog post's code</a> by clicking "Raw' on GitHub. <br>
 Using both "image" and "thumbnail" makes sure that the image YOU want shows up as the thumbnail image for that page/post :). <br>
 I think that's enough for now. I hope this was useful for some newbs like me and you'll stick around to read my next blog post <3. <br>
-<p style="weight: bold;">PROTIP: If you want to highlight Liquid code inside of Jekyll, just write {{ "{% raw "}}%} before adding the highlighted code and {{ "{% endraw "}}%} when you want to finish it. </p>
+<p style="font-weight: bold;">PROTIP: If you want to highlight Liquid code inside of Jekyll, just write {{ "{% raw "}}%} before adding the highlighted code and {{ "{% endraw "}}%} when you want to finish it. </p>
