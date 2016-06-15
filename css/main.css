@@ -110,7 +110,11 @@ ul.posts li {
     margin-top: 0;
     color: rgba(51, 51, 51, 0.8);
 }
-.sharing {
-    vertical-align: baseline !important;
-}
+.social li{
+    display:inline;
+}  
+
+.fb-share-button{
+    position:relative;
+    top:-7px;
 }
