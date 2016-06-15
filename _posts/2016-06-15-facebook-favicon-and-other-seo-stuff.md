@@ -15,7 +15,7 @@ On the other hand, I had no idea what kind of favicon I wanted. I made a simple 
 <img class="postimg" src="http://emiralkafagi.me/img/fav.png">
 What you do is create a 32x32px (for Retina and higher resolution) .png favicon and upload it wherever you want (I try to keep all my images in my /img folder).<br>
 Next, you'll need to add this line to the <i>head</i> part: <br>
-<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;link</span> <span style="color: #a6e22e">rel=</span><span style="color: #e6db74">&quot;shortcut icon&quot;</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;image/png&quot;</span> <span style="color: #a6e22e">href=</span><span style="color: #e6db74">&quot;/img/fav.png&quot;</span><span style="color: #f92672">&gt;</span>
+<div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;link</span> <span style="color: #a6e22e">rel=</span><span style="color: #e6db74">&quot;shortcut icon&quot;</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;image/png&quot;</span> <span style="color: #a6e22e">href=</span><span style="color: #e6db74">&quot;/img/fav.png&quot;</span><span style="color: #f92672">&gt;</span>
 </pre></td></tr></table></div>
 (By the way, I use <a href="http://hilite.me/">http://hilite.me/</a> to highlight any kind of code :) )
 But, you would change "/favicon.png" to the file path of your favicon (mine is /img/fav.png because my favicon "fav.png" is located in the folder "img")
@@ -24,7 +24,7 @@ When I tried sharing my <a href="http://www.emiralkafagi.me/blog/2016/06/03/why-
 First, you should always read the <a href="https://developers.facebook.com/docs/sharing/webmasters">official Facebook docs</a> on <a href="http://ogp.me/">the Open Graph protocol</a>. It really helps! <br>
 But, the main problem is to include the Jekyll/Liquid variables so it works with OG (Open Graph). Basically, you just put a bunch of Meta Tags that tell Facebook what is what. Which part is the name of the author, which part is the description, title, thumbnail image, etc. And you put all those meta tags in your &lt;head&gt;&lt;/head&gt; part. On my blog, I used includes, instead of having one big head.html file, I included an og.html file in it which only has the meta tags for Open Graph. <br>
 This is the code:
-<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+<div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
  2
  3
  4
@@ -75,14 +75,14 @@ To be honest, I can't remember where I found this code, but I think it was a mix
 As you can see, there are a lot of {} brackets. These are the liquid tags which "dynamically" pull tag information from the page you are in. This means that instead of having to write tags manually for each page and for every new page, you tell Jekyll to write those automatically, for each page and give it to Facebook. <br>
 I will be VERY honest with you: I am not sure what all the parts of this code do EXACTLY. I'll try to explain some of them, so you can at least get how this works. <br>
 Let's take the first line as an example.
-<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;og:title&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&quot;</span><span style="color: #f92672">&gt;</span>
+<div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;og:title&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&quot;</span><span style="color: #f92672">&gt;</span>
 </pre></td></tr></table></div>
 This meta tag is for the title. This is what the code is in layman's terms:<br>
 If there is a page title (which is defined as page.title) then use that, otherwise use the site's title (which is site.title). The site title is defined in your _config.yml, but I generally try to have "title" in the front matter of every page (you just write title: *insert your title here* between the ---'s of every page).
 <h3>Twitter</h3>
 I did the same with <a href="https://dev.twitter.com/cards/overview">Twitter cards</a>, but Twitter has a bit of a different meta tag structure. I made my website use the "Summary Card with Large Image" to make my website look pretty when I share something from my website (even though I know no one actually reads my blog posts, I try).<br>
 I also used an Include to include this code in my head.html file. This is the code:
-<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="color:#FFF ; margin: 0; line-height: 125%"> 1
+<div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="color:#FFF ; margin: 0; line-height: 125%"> 1
  2
  3
  4
