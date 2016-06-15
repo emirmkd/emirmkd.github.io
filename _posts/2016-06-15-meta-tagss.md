@@ -19,7 +19,7 @@ What you do is create a 32x32px (for Retina and higher resolution) .png favicon 
 Next, you'll need to add this line to the <i>head</i> part: <br>
 <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;color:#FFF;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;link</span> <span style="color: #a6e22e">rel=</span><span style="color: #e6db74">&quot;shortcut icon&quot;</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;image/png&quot;</span> <span style="color: #a6e22e">href=</span><span style="color: #e6db74">&quot;/img/fav.png&quot;</span><span style="color: #f92672">&gt;</span>
 </pre></td></tr></table></div>
-<i>(By the way, I use <a href="http://hilite.me/">http://hilite.me/</a> to highlight any kind of code :) )</i> <br>
+<i>(By the way, I use <a href="http://hilite.me/">http://hilite.me/</a> to highlight any kind of code)</i> <br>
 But, you would change "/favicon.png" to the file path of your favicon (mine is /img/fav.png because my favicon "fav.png" is located in the folder "img")
 <h3>Facebook stuff</h3>
 When I tried sharing my <a href="http://www.emiralkafagi.me/blog/2016/06/03/why-jekyll">first blog post</a> on Facebook, it didn't really look that great. There was no image and the title and description were the ones I set for my website, but not from the blog post. I did some searching and found all the right answers. <br>
