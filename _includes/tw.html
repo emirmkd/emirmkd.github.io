@@ -9,12 +9,11 @@
 {% if page.url %}
   <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
 {% endif %}
-<meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
-<!--- {% if page.description %}
+{% if page.description %}
   <meta name="twitter:description" content="{{ page.description }}">
 {% else %}
   <meta name="twitter:description" content="{{ site.description }}">
-{% endif %} -->
+{% endif %}
 {% if page.image %}
   <meta name="twitter:image:src" content="{{ site.url }}{{ page.image }}">
 {% else %}
