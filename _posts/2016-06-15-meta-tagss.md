@@ -137,11 +137,10 @@ It works on the same principle as Facebook's tags. If there is a page title, use
 After you include this code in your website, you need to validate the meta tags on Twitter's <a href="https://cards-dev.twitter.com/validator">Validator tool</a>.
 <h3>Images on Facebook and Twitter</h3>
 This part is really important, and it was pretty hard for me to get it right, until I realized how easy it is -.- <br><br>
-What you do is, you put "image" and "thumbnail" tags in the front matter of your pages and posts. You do this simply by adding: <br><br>
+What you do is, you put "image" and "thumbnail" tags in the front matter of your pages and posts. You do this simply by adding: <br>
 <div style="background: #272822; overflow:auto;width:auto;color:#fff;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">image: link/or/path/to/image 
 thumbnail: use/the/same/link/as/above 
 </pre></div>
-
 You can see an example of this on my <a href="https://github.com/emirmkd/emirmkd.github.io/blob/master/_posts/2016-06-03-why-jekyll.md">last blog post's code</a> by clicking "Raw' on GitHub. <br>
 Using both "image" and "thumbnail" makes sure that the image YOU want shows up as the thumbnail image for that page/post :). <br><br>
 I think that's enough for now. I hope this was useful for some newbs like me and you'll stick around to read my next blog post <3. <br>
