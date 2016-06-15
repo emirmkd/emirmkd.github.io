@@ -8,7 +8,7 @@ url: 'https://www.emiralkafagi.me/'
 enforce_ssl: 'emiralkafagi.me/'
 author: 'Emir Al-Kafagi'
 twitter: 'EmirTheG33k'
-description: 'I'm the guy that everyone calls when their PC doesn't work.'
+description: "I'm the guy that everyone calls when their PC doesn't work."
 comments: true
 favicon: img/fav.png
 rss_url: blog/atom.xml
