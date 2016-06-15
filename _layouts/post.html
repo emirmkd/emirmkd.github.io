@@ -6,7 +6,10 @@ comments: true
 <p class="meta postdate" style="font-weight:bold;">Date: {{ page.date | date_to_string }}</p>
 <title>{{ page.title }} | Emir Al-Kafagi</title>
 <div class="post">
+  <!--- Facebook save button! -->
   <div class="fb-save" data-uri="{{ page.url }}" data-size="large"></div>
+   <!--- Facebook share button! -->
+  <div class="fb-share-button" data-href="{{ page.url }}" data-layout="button_count" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.emiralkafagi.me%2F&amp;src=sdkpreparse">Share</a></div>
   {{ content }}
 </div>
 {% if page.comments %}
