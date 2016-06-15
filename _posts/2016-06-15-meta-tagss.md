@@ -25,3 +25,54 @@ But, you would change "/favicon.png" to the file path of your favicon (mine is /
 When I tried sharing my <a href="http://www.emiralkafagi.me/blog/2016/06/03/why-jekyll">first blog post</a> on Facebook, it didn't really look that great. There was no image and the title and description were the ones I set for my website, but not from the blog post. I did some searching and found all the right answers. <br>
 First, you should always read the <a href="https://developers.facebook.com/docs/sharing/webmasters">official Facebook docs</a> on <a href="http://ogp.me/">the Open Graph protocol</a>. It really helps! <br>
 But, the main problem is to include the Jekyll/Liquid variables so it works with OG (Open Graph). Basically, you just put a bunch of Meta Tags that tell Facebook what is what. Which part is the name of the author, which part is the description, title, thumbnail image, etc. And you put all those meta tags in your &lt;head&gt;&lt;/head&gt; part. On my blog, I used includes, instead of having one big head.html file, I included an og.html file in it which only has the meta tags for Open Graph. <br>
+This is the code:
+<div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;og:title&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}&quot;</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;og:type&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{% if page.thumbnail %}article{% else %}website{% endif %}&quot;</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;og:url&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ page.url | replace:&#39;index.html&#39;,&#39;&#39; | prepend: site.baseurl | prepend: site.url }}&quot;</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;og:image&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{% if page.thumbnail %}{{ page.thumbnail | prepend: site.baseurl | prepend: site.url }}{% else %}{{ {{baseurl}}/avatar | prepend: site.baseurl | prepend: site.url }}{% endif %}&quot;</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;og:description&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}&quot;</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;og:site_name&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ site.title }}&quot;</span><span style="color: #f92672">&gt;</span>
+
+<span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;og:locale&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ site.locale }}&quot;</span><span style="color: #f92672">&gt;</span>
+
+{% if page.date %}
+  <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;article:published_time&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ page.date | date_to_xmlschema }}&quot;</span><span style="color: #f92672">&gt;</span>
+  <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;article:author&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ site.fb_admins }}&quot;</span><span style="color: #f92672">&gt;</span>
+  {% for post in site.related_posts limit:3 %}
+    <span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;og:see_also&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ post.url | replace:&#39;index.html&#39;,&#39;&#39; | prepend: site.baseurl | prepend: site.url }}&quot;</span><span style="color: #f92672">&gt;</span>
+  {% endfor %}
+{% endif %}
+<span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;fb:admins&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ site.fb_admins }}&quot;</span><span style="color: #f92672">&gt;</span>
+<span style="color: #f92672">&lt;meta</span> <span style="color: #a6e22e">property=</span><span style="color: #e6db74">&quot;fb:app_id&quot;</span> <span style="color: #a6e22e">content=</span><span style="color: #e6db74">&quot;{{ site.fb_appid }}&quot;</span><span style="color: #f92672">&gt;</span>
+</pre></td></tr></table></div>
+To be honest, I can't remember where I found this code, but I think it was a mix from a few places and then a bit of my own addition. <br>
+<h4>What it does?</h4>
+As you can see, there are a lot of {} brackets. These are the liquid tags which "dynamically" pull tag information from the page you are in. This means that instead of having to write tags manually for each page and for every new page, you tell Jekyll to write those automatically, for each page and give it to Facebook. <br>
+I will be VERY honest with you: I am not sure what all the parts of this code do EXACTLY. I'll try to explain some of them, so you can at least get how this works. <br>
