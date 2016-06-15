@@ -1,4 +1,5 @@
 name: 'Emir Al-Kafagi, The Arab Geek'
+title: Emir Al-Kafagi's Website
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 fb_admins: https://www.facebook.com/emir.alkafagi
