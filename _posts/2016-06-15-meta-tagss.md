@@ -89,7 +89,7 @@ If there is a page title (which is defined as page.title) then use that, otherwi
 I did the same with <a href="https://dev.twitter.com/cards/overview">Twitter cards</a>, but Twitter has a bit of a different meta tag structure. I made my website use the "Summary Card with Large Image" to make my website look pretty when I share something from my website (even though I know no one actually reads my blog posts, I try).<br>
 I also used an Include to include this code in my head.html file. This is the code:
 {% raw %}
-<div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="color:#FFF ; margin: 0; line-height: 125%"> 1
+<div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;color:#FFF;"><table><tr><td><pre style="color:#FFF; margin: 0; line-height: 125%"> 1
  2
  3
  4
