@@ -138,7 +138,7 @@ After you include this code in your website, you need to validate the meta tags 
 <h3>Images on Facebook and Twitter</h3>
 This part is really important, and it was pretty hard for me to get it right, until I realized how easy it is -.- <br><br>
 What you do is, you put "image" and "thumbnail" tags in the front matter of your pages and posts. You do this simply by adding: <br><br>
-<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;color:#fff;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">image: link/or/path/to/image 
+<div style="background: #272822; overflow:auto;width:auto;color:#fff;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">image: link/or/path/to/image 
 thumbnail: use/the/same/link/as/above 
 </pre></div>
 
