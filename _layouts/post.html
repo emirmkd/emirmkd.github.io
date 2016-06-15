@@ -6,7 +6,7 @@ comments: true
 <p class="meta postdate" style="font-weight:bold;">Date: {{ page.date | date_to_string }}</p>
 <title>{{ page.title }} | Emir Al-Kafagi</title>
 <div class="post">
-  <div class="fb-save" data-uri="https://emiralkafagi.me" data-size="large"></div>
+  <div class="fb-save" data-uri="{{ page.url }}" data-size="large"></div>
   {{ content }}
 </div>
 {% if page.comments %}
