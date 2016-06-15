@@ -11,3 +11,9 @@ thumbnail: img/fbseo.png
 <img class="postimg" src="https://emiralkafagi.me/img/fbseo.png">
 First, let me say, I started writing this blog post TEN DAYS AGO! I was a bit lazy to write, and then got hung up with work, social life (imagine that) and being lazy. Now, off to the actual blogging(?).
 <h3>Favicon</h3>
+Interestingly, this was a hard nut to crack because I haven't had a need to set a favicon manually... ever? Wordpress can get you spoiled like that! No need to write a single damn line of code! <br>
+<br>
+On the other hand, I had no idea what kind of favicon I wanted. I made a simple letter "E" in my favorite color: blue.
+<img class="postimg" src="https://emiralkafagi.me/img/fav.png">
+What you do is create a 32x32px (for Retina and higher resolution) .png favicon and upload it wherever you want (I try to keep all my images in my /img folder).<br>
+Next, you'll need to add this line to the <i>head</i> part: <br>
