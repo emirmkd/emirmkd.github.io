@@ -6,6 +6,7 @@ comments: true
 <p class="meta postdate" style="font-weight:bold;">Date: {{ page.date | date_to_string }}</p>
 <title>{{ page.title }} | Emir Al-Kafagi</title>
 <div class="post">
+  <div class="sharing"
   <!--- Facebook save button! -->
   <div class="fb-save" data-uri="{{ page.url }}" data-size="small"></div>
    <!--- Facebook share button! -->
@@ -15,6 +16,7 @@ comments: true
  
   <!--- Twitter follow button! -->
   <a href="https://twitter.com/EmirTheG33k" class="twitter-follow-button" data-show-count="false">Follow @EmirTheG33k</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
   {{ content }}
 
 
