@@ -7,6 +7,7 @@ image: http://cognitiveseo.com/blog/wp-content/uploads/2013/05/facebook-seo.png
 thumbnail: http://cognitiveseo.com/blog/wp-content/uploads/2013/05/facebook-seo.png
 ---
 <p class="postdescription">After setting up the basics, I turned to some other basics that some might take for granted: SEO, Favicons, Website Titles and Facebook OpenGraph. </p>
+<!--more-->
 <img class="postimg" src="http://cognitiveseo.com/blog/wp-content/uploads/2013/05/facebook-seo.png">
 First, let me say, I started writing this blog post TEN DAYS AGO! I was a bit lazy to write, and then got hung up with work, social life (imagine that) and being lazy. Now, off to the actual blogging(?).
 <h3>Favicon</h3>
