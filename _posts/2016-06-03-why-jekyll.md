@@ -4,6 +4,7 @@ title: "Why Jekyll"
 date: 2016-06-03
 thumbnail: img/logo-2x.png
 image: img/logo-2x.png
+description: Some of you may wonder why I chose to make this blog on GitHub pages with Jekyll. Well, I learned about Jekyll a while ago, together with the information that you can host your website on GitHub for free.
 ---
 <p class="postdescription">Some of you may wonder why I chose to make this blog on GitHub pages with Jekyll. Well, I learned about Jekyll a while ago, together with the information that you can host your website on GitHub for free.</p>
 <!--more-->
