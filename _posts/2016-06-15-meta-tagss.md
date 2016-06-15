@@ -24,6 +24,7 @@ But, you would change "/favicon.png" to the file path of your favicon (mine is /
 <h3>Facebook stuff</h3>
 When I tried sharing my <a href="http://www.emiralkafagi.me/blog/2016/06/03/why-jekyll">first blog post</a> on Facebook, it didn't really look that great. There was no image and the title and description were the ones I set for my website, but not from the blog post. I did some searching and found all the right answers. <br>
 First, you should always read the <a href="https://developers.facebook.com/docs/sharing/webmasters">official Facebook docs</a> on <a href="http://ogp.me/">the Open Graph protocol</a>. It really helps! <br>
+<br>
 But, the main problem is to include the Jekyll/Liquid variables so it works with OG (Open Graph). Basically, you just put a bunch of Meta Tags that tell Facebook what is what. Which part is the name of the author, which part is the description, title, thumbnail image, etc. And you put all those meta tags in your &lt;head&gt;&lt;/head&gt; part. On my blog, I used includes, instead of having one big head.html file, I included an og.html file in it which only has the meta tags for Open Graph. <br>
 This is the code:
 {% raw %}
@@ -76,7 +77,7 @@ This is the code:
 {% endraw %}
 To be honest, I can't remember where I found this code, but I think it was a mix from a few places and then a bit of my own addition. <br>
 <h4>What it does?</h4>
-As you can see, there are a lot of {} brackets. These are the liquid tags which "dynamically" pull tag information from the page you are in. This means that instead of having to write tags manually for each page and for every new page, you tell Jekyll to write those automatically, for each page and give it to Facebook. <br>
+As you can see, there are a lot of {} brackets. These are the liquid tags which "dynamically" pull tag information from the page you are in. This means that instead of having to write tags manually for each page and for every new page, you tell Jekyll to write those automatically, for each page and give it to Facebook. <br><br>
 I will be VERY honest with you: I am not sure what all the parts of this code do EXACTLY. I'll try to explain some of them, so you can at least get how this works. <br>
 Let's take the first line as an example.
 {% raw %}
@@ -135,11 +136,11 @@ I also used an Include to include this code in my head.html file. This is the co
 It works on the same principle as Facebook's tags. If there is a page title, use that, otherwise take the site's title. <br>
 After you include this code in your website, you need to validate the meta tags on Twitter's <a href="https://cards-dev.twitter.com/validator">Validator tool</a>.
 <h3>Images on Facebook and Twitter</h3>
-This part is really important, and it was pretty hard for me to get it right, until I realized how easy it is -.- <br>
-What you do is, you put "image" and "thumbnail" tags in the front matter of your pages and posts. You do this simply by adding: <br>
+This part is really important, and it was pretty hard for me to get it right, until I realized how easy it is -.- <br><br>
+What you do is, you put "image" and "thumbnail" tags in the front matter of your pages and posts. You do this simply by adding: <br><br>
 image: link/or/path/to/image <br>
-thumbnail: use/the/same/link/as/above <br>
+thumbnail: use/the/same/link/as/above <br><br>
 You can see an example of this on my <a href="https://github.com/emirmkd/emirmkd.github.io/blob/master/_posts/2016-06-03-why-jekyll.md">last blog post's code</a> by clicking "Raw' on GitHub. <br>
-Using both "image" and "thumbnail" makes sure that the image YOU want shows up as the thumbnail image for that page/post :). <br>
+Using both "image" and "thumbnail" makes sure that the image YOU want shows up as the thumbnail image for that page/post :). <br><br>
 I think that's enough for now. I hope this was useful for some newbs like me and you'll stick around to read my next blog post <3. <br>
-<p style="font-weight: bold;">PROTIP: If you want to highlight Liquid code inside of Jekyll, just write {{ "{% raw "}}%} before adding the highlighted code and {{ "{% endraw "}}%} when you want to finish it. And if you want to know how I quoted that without breaking the code, read <a href="http://tesoriere.com/2010/08/25/liquid-code-in-a-liquid-template-with-jekyll/">this</a> post</p>
+<p style="font-weight: bold;">PROTIP: If you want to highlight Liquid code inside of Jekyll, just write {{ "{% raw "}}%} before adding the highlighted code and {{ "{% endraw "}}%} when you want to finish it. And if you want to know how I quoted that without breaking the code, read <a href="http://tesoriere.com/2010/08/25/liquid-code-in-a-liquid-template-with-jekyll/">this</a> post.</p>
