@@ -220,4 +220,8 @@ a.sidebar-nav-item:focus {
     margin-right: 4rem;
   }
 }
+.home {
+    background-image: url(https://emiralkafagi.me/img/galaxy.jpg);
+    width: 100%;
+    height: auto;
 }
