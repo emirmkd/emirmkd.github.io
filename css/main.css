@@ -3,10 +3,7 @@ body {
     width: 70%;
     font-family: 'Open Sans', sans-serif;
     background-image: url(https://emiralkafagi.me/img/galaxy.jpg);
-}
-body img {
-     width: 100%;
-    height: auto;
+    background-size: cover;
 }
 nav {
   border-bottom: solid black 1px;
