@@ -4,6 +4,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-image: url(https://emiralkafagi.me/img/galaxy.jpg);
     background-size: cover;
+    background-position: center; 
+    background-color: black;
 }
 nav {
   border-bottom: solid black 1px;
