@@ -226,6 +226,6 @@ a.sidebar-nav-item:focus {
     margin-right: 4rem;
   }
 }
-h1 h2 h3 h4 {
+h1, h2, h3, h4 {
     color: #fff;
 }
