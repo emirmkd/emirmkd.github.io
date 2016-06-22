@@ -6,6 +6,7 @@ body {
     background-size: cover;
     background-position: center; 
     background-color: black;
+    background-repeat: no-repeat;
 }
 nav {
   border-bottom: solid black 1px;
