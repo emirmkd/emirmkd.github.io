@@ -2,6 +2,9 @@ body {
     margin: 60px auto;
     width: 70%;
     font-family: 'Open Sans', sans-serif;
+    background-image: url(https://emiralkafagi.me/img/galaxy.jpg);
+    width: 100%;
+    height: auto;
 }
 nav {
   border-bottom: solid black 1px;
@@ -219,9 +222,4 @@ a.sidebar-nav-item:focus {
     margin-left: 22rem;
     margin-right: 4rem;
   }
-}
-.home {
-    background-image: url(https://emiralkafagi.me/img/galaxy.jpg);
-    width: 100%;
-    height: auto;
 }
