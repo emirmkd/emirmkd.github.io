@@ -88,12 +88,13 @@ ul.posts li {
     border-radius: 50%;
 }
 .svglogo {
-    width: 50%;
-    max-width: 335px;
+    width: 29%;
+    max-width: 240px;
     margin-left: auto;
     margin-right: auto;
-    display: block
-    
+    margin-top: 20%;
+    margin-bottom: 20%;
+    display: block;
 }
 .myname {
     margin-bottom:0;
