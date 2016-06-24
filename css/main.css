@@ -4,7 +4,7 @@ body {
     font-family: 'Open Sans', sans-serif;
    /* background-image: url(https://emiralkafagi.me/img/galaxy.jpg); */
     background-size: cover;
-    background-color: black;
+    background-color: #efeee9;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -120,7 +120,7 @@ ul.posts li {
     font-size: 0.8em;
     line-height: 1.2em;
     margin-top: 0;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(41, 41, 41, 0.8);
 }
 .social li{
     display:inline;
@@ -227,6 +227,4 @@ a.sidebar-nav-item:focus {
     margin-right: 4rem;
   }
 }
-h1, h2, h3, h4 {
-    color: #fff;
-}
+
