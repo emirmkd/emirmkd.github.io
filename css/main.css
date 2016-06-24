@@ -87,6 +87,14 @@ ul.posts li {
     border: solid 10px #3399ff;
     border-radius: 50%;
 }
+.svglogo {
+    width: 50%;
+    max-width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+    
+}
 .myname {
     margin-bottom:0;
 }
