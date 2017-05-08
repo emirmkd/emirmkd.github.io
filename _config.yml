@@ -4,7 +4,7 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 fb_admins: "594983174"
 avatar: img/emir.jpg
-url: 'https://www.emiralkafagi.me/'
+# url: 'http://www.emiralkafagi.me/'
 enforce_ssl: 'emiralkafagi.me/'
 author: 'Emir Al-Kafagi'
 twitter: 'EmirTheG33k'
