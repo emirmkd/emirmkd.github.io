@@ -1,87 +1,49 @@
-name: 'Emir Al-Kafagi, The Arab Geek'
-title: Emir Al-Kafagi's Website
+# Site settings
+title: Lorem Ipsum - Web Developer
+description: "A blog about lorem ipsum ..."
+baseurl: "" # for test: remove string '/space-jekyll-templa' to ''
+url: "http://victorvoid.github.io/space-jekyll-template/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
+# User settings
+username: lorem ipsum
+user_title: Lorem Ipsum - FrontEnd
+email: lorem.lorem@ipsum.com
+twitter_username: loremipsum
+github_username:  loremipsum
+gplus_username:  loremipsum
+disqus_username: loremipsum
+
+# Build settings
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
-fb_admins: "594983174"
-avatar: img/emir.jpg
-# url: 'http://www.emiralkafagi.me/'
-enforce_ssl: 'emiralkafagi.me/'
-author: 'Emir Al-Kafagi'
-twitter: 'EmirTheG33k'
-description: "I'm the guy that everyone calls when their PC doesn't work."
-comments: true
-favicon: img/fav.png
-rss_url: blog/atom.xml
-excerpt_separator: <!--more-->
-locale: "en_US"
-fb_appid: "1549021652067281"
-# Author settings
-author:
-  name: Emir Al-Kafagi
-  title: Geek, Designer, PC guy
-  address: Skopje, Macedonia
-  email: info@emiralkafagi.me
-  link: http://emiralkafagi.me
-  github: emirmkd
-  linkedin: emiralkafagi
-  twitter: emirtheg33k
-  gavatar: /resumecard/assets/img/avatar.JPG
-  stackoverflow:
-#  stackoverflow: 4582127
-  workHistory:
-    - work1:
-      company: Finzsoft Solutions Ltd
-      location: Auckland, New Zealand
-      title: Java Developer
-      started: 2014
-      duration: (2014 - Present)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-    - work2:
-      company: Agfa HealthCare
-      location: Shanghai, China
-      title: Java Developer
-      started: 2012
-      duration: (2012 - 2014)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-    - work3:
-      company: Citigroup Services and Technology (China) Limited
-      location: Shanghai, China
-      title: Java Developer
-      started: 2009
-      duration: (2009 - 2012)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-  educationHistory:
-    - education1:
-      organization: Northeastern University
-      location: Shenyang, China
-      degree: Bachelor
-      major: Software Engineering
-      started: 2005
-      duration: (2005 - 2009)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-  languages:
-    - language1:
-      name: Macedonian
-      proficiency: Native
-    - language2:
-      name: English
-      proficiency: Highly proficient
-    - language3:
-      name: German
-      proficiency: Beginner
-  programmingSkills:
-    - skill1:
-      name: Photoshop
-      percentage: 80%
-    - skill2:
-      name: Illustrator
-      percentage: 60%
-    - skill3:
-      name: After Effects
-      percentage: 40%
-    - skill4:
-      name: HTML/CSS
-      percentage: 50%
-    - skill5:
-      name: Social Media
-      percentage: 90%
+highlighter: rouge
+permalink: /:title/
+
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Links to include in menu navigation
+links:
+  - title: home
+    url: /
+  - title: my posts
+    url: /posts
+  - title: series
+    url: /series
+  - title: tags
+    url: /tags
+  - title: about me
+    url: /about
+# projects in header index
+projects:
+  - name: asciilang
+    url: https://github.com/victorvoid/asciilang
+  - name: vim-frontend
+    url: https://github.com/victorvoid/vim-frontend
+  - name: generator-capybara
+    url: https://github.com/victorvoid/generator-capybara 
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']
