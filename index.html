@@ -1,3 +1,25 @@
 ---
 layout: default
+title: Emir Al-Kafagi
+description: I'm the guy that everyone calls when their PC doesn't work.
+image: img/emir.jpg
+thumbnail: img/emir.jpg
 ---
+<title>Emir Al-Kafagi</title>
+<div class="home"> 
+<div class="blurb">
+	<h2>Hi there,</h2>
+	<h1 class="myname">I'm Emir Al-Kafagi</h1>
+	<p class="info">I'm the guy that everyone calls when their PC doesn't work.</p>
+    	</div><!-- /.blurb -->
+    	<img class="svglogo" src="http://www.emiralkafagi.me/img/e.svg">
+    		<ul class="posts">
+<h4 style="margin-bottom: 5px;">Latest blog post:</h4>
+	  {% for post in site.posts limit:1 %}
+<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+<p class="postexcerpt">{{ post.excerpt | strip_html }}</p>
+</li>
+{% endfor %}
+    
+	</ul>
+</div>

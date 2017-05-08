@@ -1,21 +1,37 @@
----
-layout: compress
----
-
 <!DOCTYPE html>
-<html lang="pt-br">
-  	{% include head.html %}
-    <body>
-    	{% include svg-icons.html %}
-		<header class="page-header">
-			<h1 class="post-title">{{ page.title }}</h1>
-			{% include menu-search.html %}
-		</header>
-        <main>
-		    {{ content }}
-		</main>
-        {% include footer.html %}
-        {% include scripts.html %}
-		
-    </body>
+<html>
+	<meta charset="UTF-8">
+{% include head.html %}
+	<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1549021652067281";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+	{% include fbcomments.html %}
+		<nav>
+    		<ul>
+        		<li><a href="/">Home!</a></li>
+        		<li><a href="https://mk.linkedin.com/in/emiralkafagi">CV</a></li>
+        		<li><a href="http://www.emiralkafagi.me/blog/">Blog</a></li>
+        	<!---	<li><a href="http://www.emiralkafagi.me/features/">Features</a></li> -->
+        		<li><a href="http://www.emiralkafagi.me/blog/atom.xml">RSS</a></li>
+    		</ul>
+		</nav>
+		<!---	{% include sidebar.html %} -->
+		<div class="container">
+			
+			{{ content }}
+			
+			</div><!-- /.container -->
+			<footer>
+    		<ul>
+        		<li><a href="mailto:emir.alkafagi@gmail.com">email</a></li>
+        		<li><a href="https://github.com/emirmkd">github.com/emirmkd</a></li>
+			</ul>
+		</footer>
+	</body>
 </html>

@@ -1,26 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    {% include head.html %}
-    <body>
-        {% include svg-icons.html %}
-        {% include header-post.html %}
-        {% include tree-posts.html %}
-        <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
-            {% if page.date %}
-                <div class="time">
-                    <time itemprop="datePublished" datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
-                </div>
-            {% endif %}
-            <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
+---
+layout: default
+comments: true
+---
+<h1>{{ page.title }}</h1>
+<p class="meta postdate" style="font-weight:bold;">Date: {{ page.date | date_to_string }}</p>
+<title>{{ page.title }} | Emir Al-Kafagi</title>
+<div class="post">
+  <ul class="social"
+  <!--- Facebook save button! -->
+  <li></lie><div class="fb-save" data-uri="{{ page.url }}" data-size="small"></div></li>
+   <!--- Facebook share button! -->
+ <li><div class="fb-share-button" data-href="{{ page.url }}" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div></li>
+  <!--- Twitter share button! -->
+  <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="EmirTheG33k">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+ 
+  <!--- Twitter follow button! -->
+ <li><a href="https://twitter.com/EmirTheG33k" class="twitter-follow-button" data-show-count="false">Follow @EmirTheG33k</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+  </div>
+  {{ content }}
 
-            <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                {{ content }}
-            </article>
 
-            {% include share.html %}
-            {% include comments.html %}
-            {% include footer.html %}
-            {% include scripts.html %}
-        </section>
-    </body>
-</html>
+  <!---  {% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    
+    var disqus_config = function () {
+        this.page.url = "{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable */
+        this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//emiralkafagi.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+ {% endif %} -->
+  
+</div>
+<div class="fb-comments" data-href="" data-numposts="5"></div>
+
